@@ -8,7 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule); // Specify NestExpressApplication
 
   const corsOptions: CorsOptions = {
-    origin: 'http://localhost:4200', // Replace with your frontend URL
+    origin: ['http://localhost:4200', 'https://echonotesblogs.vercel.app/'], // Replace with your frontend URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Accept, Authorization',
     credentials: true, // If you need to send cookies or other credentials
